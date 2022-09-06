@@ -1,5 +1,5 @@
 # 복합 데이터형
-#### <a href="04_complex_data.cpp" target="_blank" color="red">예제파일 링크</a>
+#### <a href="04_complex_data.cpp">예제파일 링크</a>
 
 - 복합 데이터 형은 기본 정수와 부동 소수점으로부터 만들어짐
 - 배열
@@ -54,3 +54,18 @@ char size = "S" (X)
 
 - cin.getline()
 - cin.get()
+
+#### 빈행과 기타 문제
+
+- cin.clear()
+
+### 문자열과 수치의 혼합 입력
+
+## string 클래스
+
+- 문자열을 하나의 데이터형으로 나타냄
+
+```
+string str = "Hello World"; // string 객체 초기화
+```
+
