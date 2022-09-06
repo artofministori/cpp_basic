@@ -3,6 +3,8 @@
 
 ## 차례
 
+### Section 01
+
 - <a href="01_cpp_intro.md">01 C++ 첫 걸음</a>
 - <a href="02_cpp_basic.md">02 C++ 시작하기</a>
 - <a href="03_data_process.md">03 C++ 데이터 처리</a>
