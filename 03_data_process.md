@@ -124,8 +124,8 @@ const int MONTHS = 12;
 #### 대입 구문에서 형 변환
 
 ```
-float a = 3 // int => float
-int b = 3.333f // float => int
+float a = 3; // int => float
+int b = 3.333f; // float => int
 ```
 
 #### {} 사용한 형 변환
@@ -135,28 +135,7 @@ int b = 3.333f // float => int
 #### 매개변수를 전달할 때의 형 변환
 
 ```
-int a = 19.99 + 19.99 // double + double => int
-int b = (int) 19.99 + (int) 19.99 // legacy
-int c = int (19.99) + int (19.99) // new
+int a = 19.99 + 19.99; // double + double => int
+int b = (int) 19.99 + (int) 19.99; // legacy
+int c = int (19.99) + int (19.99); // new
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
