@@ -1,4 +1,4 @@
-# 복합 데이터형[<a href="04_complex_data.cpp">예제파일</a>]
+# 복합 데이터형<a href="04_complex_data.cpp" style="font-size:10px;">[예제파일]</a>
 
 - 복합 데이터 형은 기본 정수와 부동 소수점으로부터 만들어짐
 - 배열
