@@ -97,3 +97,101 @@ strcat(str1, str2); // str2를 str1에 추가
 ### 다른 형태의 문자열 상수
 
 ## 구조체
+
+- 관련된 정보를 하나의 단위로 묶어서 저장
+- 여러 종류의 데이터를 저장
+- 클래스의 기초
+- 사용자 정의 데이터형 -> 선언 필요
+- 구조체 서술 정의, 구조체 변수 생성
+
+```
+// 구조체 서술 정의
+struct inflatable {
+  char name[20];
+  float volume;
+  double price;
+}
+
+// 구조체 변수 생성
+inflatable a;
+
+// 구조체 사용
+// 초기화
+inflatable quest = {
+  "Hello",
+  1.88f,
+  29.99
+}
+
+// 대입
+quest.volume = 3.09f;
+```
+
+### 구조체 대입
+
+### 구조체 배열
+
+```
+inflatable quest[2] = {
+
+  {"Hello", 0.12f, 55.94},
+  {"World", 0.45f, 89.32}
+
+};
+```
+
+## 공용체
+
+- 서로 다른 데이터 형을 한 번에 한 가지만 보관할 수 있는 데이터 형식이다.
+
+## 열거체
+
+- spectrum을 새로운 데이터 형의 이름의 열거체 형태 데이터로 생성
+- red ~ ultraviolet 순서대로 0~7까지 정수값을 나타내는 기호 상수 생성 -> 열거자
+- 입력되는 정수값을 지정할 수 있음
+- 대입 연산만 가능
+
+```
+enum spectrum {
+  red, orange, yellow, green, blue, violet, indigo, ultraviolet
+}
+
+spectrum band;
+
+band = blue; (O)
+band = 2000; (X)
+
+* band에는 8가지 값만 대입할 수 있다.
+
+int color = blue; (O)
+band = 3 (X)
+color = 3 + red;
+
+enum bigstep { first, second = 100, third } // third = 101
+
+enum { zero, null = 0, one, uno = 1 } // zero, null = 0 ,, one, uno = 1
+```
+
+## 포인터와 메모리 해제
+
+- 포인터 : 값 자체가 아니라 값의 주소를 저장하는 변수
+- 메모리 관리하는데 필수
+- runtime, compile time
+- oop에서 배열의 크기를 runtime에 결정하기를 원하는 경우
+
+```
+int home = 5;
+
+home : 변수 값
+&home : 변수 주소
+```
+
+```
+int a = 5; // int형 변수 선언, 5 초기화
+int* pa; // int형 포인터 선언
+pa = &a; // pa 포인터에 a 주소 대입
+
+- a, *pa => 변수값 6
+- &a, pa => 주소값 16진수
+```
+
