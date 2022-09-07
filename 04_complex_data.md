@@ -69,3 +69,31 @@ char size = "S" (X)
 string str = "Hello World"; // string 객체 초기화
 ```
 
+### 대입, 결합, 추가
+
+```
+string str1 = "Hello";
+string str2;
+string str3;
+
+str1 = str2;
+str3 = str1 + str2;
+str3 += str1;
+```
+
+### string 클래스 조작
+
+```
+#include <string> // string class 사용
+#include <cstring> // c 스타일 문자열 라이브러리
+
+// C 스타일
+strcpy(str1, str2); // str2를 str1에 복사
+strcat(str1, str2); // str2를 str1에 추가
+```
+
+### string 클래스 입출력
+
+### 다른 형태의 문자열 상수
+
+## 구조체
