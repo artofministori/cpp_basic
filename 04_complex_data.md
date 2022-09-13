@@ -1,5 +1,5 @@
 # 복합 데이터형
-#### <a href="04_complex_data.cpp">예제파일 링크</a>
+#### <a href="04_complex_data.h">예제파일 링크</a>
 
 - 복합 데이터 형은 기본 정수와 부동 소수점으로부터 만들어짐
 - 배열
@@ -178,6 +178,7 @@ enum { zero, null = 0, one, uno = 1 } // zero, null = 0 ,, one, uno = 1
 - 메모리 관리하는데 필수
 - runtime, compile time
 - oop에서 배열의 크기를 runtime에 결정하기를 원하는 경우
+- 간접 참조 연산자(*) : 포인터 이름 앞에 붙이면 해당 주소에 저장되어 있는 값을 나타냄
 
 ```
 int home = 5;
@@ -191,7 +192,108 @@ int a = 5; // int형 변수 선언, 5 초기화
 int* pa; // int형 포인터 선언
 pa = &a; // pa 포인터에 a 주소 대입
 
-- a, *pa => 변수값 6
+- a, *pa => 변수값 5
 - &a, pa => 주소값 16진수
 ```
+
+```
+int* pa;
+
+- pa는 포인터
+- *pa는 int형 변수
+```
+
+### new를 사용한 메모리 대입
+
+- 이름이 없는 메모리를 대입하고 포인터를 사용하여 그 메모리에 접근하는 접근하는 방법
+
+```
+int* pn = new int; // 포인터를 통해서만 접근 가능
+
+int a;
+int* pa = &a;
+```
+
+### delete 메모리 해제
+
+- new로 선언한 메모리 해제
+
+```
+int* ps = new int;
+delete ps // (O)
+
+int a = 5;
+int* pa = &a;
+delete pa; // (X) new로 대입한 메모리가 아님
+
+int* pt = new int;
+int* pq = pt;
+delete pq; // (O)
+```
+
+### new 사용한 동적 배열 생성
+
+- new로 대입하지 않은 메모리는 delete로 해제하지 않음
+- 같은 메모리를 연달아 해제하지 않음
+- new [] 로 메모리 대입 => delete [] 로 메모리 해제
+- new로 메모리 대입 => delete로 메모리 해제
+- 널 포인터에는 delete를 사용하는 것이 안전
+
+```
+int* p3 = new int [3];
+
+p3[0] = 1;
+p3[1] = 2;
+p3[2] = 3;
+```
+
+### 포인터, 배열, 포인터 연산
+
+### 포인터와 문자열
+
+### new를 사용한 동적 구조체 생성
+
+```
+inflatable* ps = new inflatable;
+```
+
+- 구조체 생성
+- 구조체 멤버 접근
+  - 동적 구조체에는 이름이 없기 때문에 도트(.)을 사용할 수 없음
+  - 화살표 멤버 연산자(->)를 제공
+    - 도트(.) 멤버 연산자는 구조체 이름과 함께 사용
+    - 화살표(->) 멤버 연산자는 구조체 포인터화 함께 사용
+  - ps가 구조체 포인터이면 *ps는 구조체
+    - (*ps).price 형태 사용 가능
+
+### 자동 공간, 정적 공간, 동적 공간
+
+### 변수형 조합
+
+```
+struct thisYear{
+  int year;
+}
+
+int main(){
+  thisYear s01,s02,s03;
+  s01.year = 2020;
+  
+  thisYear* pa = &s02;
+  pa->year = 2021;
+  
+  thisYear trio[3];
+  trio[0].year = 2022;
+}
+```
+
+## 배열의 대안
+
+### Vector 템플릿 클래스
+
+### array 템플릿 클래스
+
+### 배열, Vector 객체, Array 객체 비교
+
+
 
