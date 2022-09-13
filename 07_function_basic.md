@@ -8,11 +8,11 @@
 - 함수 그룹
   - 리턴값이 없는 함수 : void 함수
 
-  ```
-  void functionName(parameter){
-    //code block
-  }
-  ```
+```
+void functionName(parameter){
+  //code block
+}
+```
 
   - 리턴 값이 있는 함수
 
