@@ -5,8 +5,8 @@
 ### 함수 정의
 
 - parameter : 함수에 전달되는 매개변수(parameter, argument)
-- 함수 그룹
-  - 리턴값이 없는 함수 : void 함수
+
+- 리턴값이 없는 함수 : void 함수
 
 ```
 void functionName(parameter){
@@ -14,7 +14,7 @@ void functionName(parameter){
 }
 ```
 
-  - 리턴 값이 있는 함수
+- 리턴 값이 있는 함수
 
 ```
 typeName functionName(parameter){
